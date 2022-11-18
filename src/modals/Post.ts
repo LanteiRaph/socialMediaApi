@@ -6,7 +6,7 @@ const PostSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    desc: {
+    description: {
       type: String,
       max: 500,
     },
@@ -21,4 +21,6 @@ const PostSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-module.exports = mongoose.model("Post", PostSchema);
+const Post = mongoose.model("Post", PostSchema);
+
+export default Post
